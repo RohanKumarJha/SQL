@@ -1,0 +1,52 @@
+	PRIMARY KEY
+CREATE DATABASE college;
+USE college;   
+CREATE TABLE student(
+	id INT,
+	name VARCHAR(50),
+	age INT NOT NULL,
+	city VARCHAR(30),
+	PRIMARY KEY(id, city)
+);
+INSERT INTO student
+	(id,name,age,city)
+VALUES
+	(1,"ROHAN",26,"DELHI"),
+	(2,"RISHABH",26,"DELHI"),
+	(2,"RAVI",26,"PUNE"),
+	(4,"AMAN",26,"DELHI");
+
+
+	UNIQUE
+CREATE DATABASE IF NOT EXISTS college;
+SHOW DATABASES;
+USE college;
+CREATE TABLE IF NOT EXISTS student(
+	id INT UNIQUE,
+	name VARCHAR(30)
+);
+INSERT INTO student
+	(id,name)
+VALUES
+	(1,"ROHAN");
+	(2,"RISHABH");
+
+
+	DEFAULT
+CREATE DATABASE IF NOT EXISTS office;
+SHOW DATABASES;
+USE office;
+CREATE TABLE IF NOT EXISTS employee(
+	name VARCHAR(30),
+	salary INT DEFAULT 25000
+);
+SHOW TABLES;
+INSERT INTO employee
+	(name,salary)
+VALUES
+	("ROHAN"),
+	("RISHABH");
+SELECT * FROM employee;
+
+
+	CHECK

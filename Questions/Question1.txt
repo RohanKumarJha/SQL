@@ -1,16 +1,16 @@
-CREATE DATABASE IF NOT EXISTS xyz;
-USE xyz;
+CREATE DATABASE IF NOT EXISTS XYZ;
 SHOW DATABASES;
-CREATE TABLE employee(
+USE XYZ;
+CREATE TABLE IF NOT EXISTS employee(
 	id INT PRIMARY KEY,
-    name VARCHAR(50),
+    name VARCHAR(30),
     salary INT NOT NULL
 );
-SELECT * FROM employee;
+SHOW TABLES;
 INSERT INTO employee
-(id,name,salary)
+	(id,name,salary)
 VALUES
-(1,"adam",25000),
-(2,"bob",30000),
-(3,"casey",40000);
+	(1,"adam",25000),
+    (2,"bob",30000),
+    (3,"casey",40000);
 SELECT * FROM employee;
